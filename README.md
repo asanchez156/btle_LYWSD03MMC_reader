@@ -23,3 +23,9 @@ sensor:
     unit_of_measurement: "%"
 
 ```
+
+# Device
+
+
+
+```
