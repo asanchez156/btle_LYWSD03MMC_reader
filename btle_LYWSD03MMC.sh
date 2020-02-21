@@ -42,13 +42,25 @@ else
   humidity=$(echo "ibase=16; $humhexa" | bc)
   temperature=$(echo "scale=1; $temperature100/100" | bc)
 
-  # Export to folder files
-  echo -n $humidity > ${location}${prefix}humedity
-  echo -n $temperature > ${location}${prefix}temperature
+  if [ -z "$temperature" ]
+  then
+    echo "There are no temperature values"
+  else
+    # Export to folder files
+    echo -n $temperature > ${location}${prefix}temperature
+    # Print sensor values
+    echo "${location}${prefix}temperature $temperature"
+  fi
 
-  # Print sensor values
-  echo "${location}${prefix}humedity $humidity"
-  echo "${location}${prefix}temperature $temperature"
+  if [ -z "$humidity" ]
+  then
+    echo "There are no humidity values"
+  else
+    # Export to folder files
+    echo -n $humidity > ${location}${prefix}humedity
+    # Print sensor values
+    echo "${location}${prefix}humedity $humidity"
+  fi
 
 fi
 
