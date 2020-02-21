@@ -25,7 +25,6 @@ sensor:
 ```
 
 # Device
-
-
+https://github.com/asanchez156/btle_LYWSD03MMC_reader/blob/master/device.png
 
 ```
