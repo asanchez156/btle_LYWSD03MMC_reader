@@ -1,4 +1,8 @@
 #!/bin/bash
+
+exec 1>/tmp/btle_LYWSD03MMC_reader.log 2>&1  # send stdout and stderr from this file to a log file
+set -x
+
 while true;
 do
   echo "Loop"
