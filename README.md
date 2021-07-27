@@ -5,7 +5,8 @@
 > Example: hass_folder_to_be_exported=/home/user/hass/config/www/sensors
 
 
-# In HASS https://www.home-assistant.io/
+# In Home assistant 
+> https://www.home-assistant.io/
 
 ## Create the sensor like this:
 
